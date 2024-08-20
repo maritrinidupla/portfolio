@@ -1,25 +1,40 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>HTML and CSS "Hello World"</title>
-	<style>
-		body {
-			background-color: #2D2D2D;
-		}
-		
-		h1 {
-			color: #C26356;
-			font-size: 30px;
-			font-family: Menlo, Monaco, fixed-width;
-		}
-		
-		p {
-			color: white;
-			font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martrini</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<h1>Hello World Example</h1>
-	<p>This is a very basic "Hello World" example made up in HTML and CSS. See if you can change the size of the header text above.</p>
+    <header>
+		<a href="name1.html" class="contact-button">MARTRINI</a>
+		<a href="name2.html" class="contact-button">CONTACTO</a>
+    </header>
+
+    <main>
+		<section class="projects">
+			<h2>PROJECTS</h2>
+			<ul>
+				<li>DA EL PASO <span class="project-number">①</span></li>
+				<li>LACESTAQUETEMERECES <span class="project-number">②</span></li>
+				<li>UNBOXING MYSTERY <span class="project-number">③</span></li>
+				<li>REBOXING <span class="project-number">④</span></li>
+				<li class="pec-item">PEC <span class="project-number">⑤</span></li>
+				<li>LA RECICLÁ <span class="project-number">⑥</span></li>
+			</ul>
+		</section>
+    </main>
+
+    <footer>
+		<div id="date" style="color:#FF0000; font-size:1.5em; font-weight:bold;"></div>
+		<script>
+			document.getElementById('date').innerHTML = new Date().toLocaleDateString('en-US', {
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric'
+			});
+		</script>
+    </footer>
 </body>
 </html>

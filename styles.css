@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: white;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.logo, .contact {
+    border: 2px solid red;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logo:hover, .contact:hover {
+    background-color: red;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.projects {
+    margin-left: 20px;
+}
+
+.projects h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projects li {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.project-number {
+    font-size: 1em;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.pec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pec-item span {
+    margin-left: 20px;
+}
+
+.projects li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button, .contact-button {
+    font-size: 1em;
+    color: #FF0000; /* Red text color */
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 5px 5px 0px #FF0000; /* Red shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+button:hover, .contact-button:hover {
+    box-shadow: 7px 7px 0px #FF0000; /* Darker shadow on hover */
+    transform: translate(-2px, -2px); /* Slight move on hover */
+}
+
+/* Ensures the contact button uses the same style */
+.contact-button {
+    display: inline-block;
+}
+
+footer {
+    text-align: right;
+    padding: 20px;
+    font-size: 1.2em;
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .projects li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-number {
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+    .martini-images {
+        margin-top: 20px;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    .martini-images img {
+        width: 80px;
+    }
+}
